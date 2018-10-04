@@ -16,3 +16,19 @@ var arr = [
 ];
 console.log(arr)
 arr[3](arr[2].name)
+
+// **************************************
+
+// var arr1 = ['John', 'Jane', 'Jack']
+
+// for (var e in arr1) {
+//     console.log(e + ': ' + arr1[e]);
+// }
+// vs.
+// for (var e=0; e<arr1.length; e++) {
+//     console.log(e + ': ' + arr1[e]);
+// }
+
+// 0: John
+// 1: Jane
+// 2: Jack
