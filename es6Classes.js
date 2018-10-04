@@ -16,6 +16,7 @@ var john = new Person('John', 'Doe')
 // 'extends' sets the Prototype (__proto__) 
 class AnotherPerson extends Person {
     constructor(firstname, lastname) {
+        // 'super' call the constructor of the object that is this Prototype
         super(firstname, lastname);
     }
 
