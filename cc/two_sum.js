@@ -15,4 +15,14 @@ function twoSum(arr, S) {    // O(n^2)
 
 twoSum([3, 5, 8, 22, 7, 90, 1], 27)
 
+function two_sum1(arr, S) {    // O(n)
+    let obJ = {}
+    for (let i = 0; i < arr.length; i++) {
+        target = S - arr[i]
+        if (obJ[target] !== undefined) {
+            return true;
+        }
+        obj[arr[i]] = true;
+    }
+    return false;
 }
