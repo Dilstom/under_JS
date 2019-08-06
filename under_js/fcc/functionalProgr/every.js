@@ -5,7 +5,7 @@
 function checkPositive(arr) {
  // Add your code below this line
 
- console.log(arr.every(n => n > 0));
+ return arr.every(n => n > 0);
  // Add your code above this line
 }
 checkPositive([1, 2, 3, -4, 5]); // false
