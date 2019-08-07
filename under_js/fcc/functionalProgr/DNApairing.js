@@ -55,3 +55,24 @@ function pairElement(str) {
 }
 
 pairElement('GCG');
+
+// 3. Solution:
+// First define an object with all pair possibilities, this allows us to easily find by key or value.
+// Split str into a characters array so we can use each letter to find its pair.
+// Use the map function to map each character in the array to an array with the character and it’s matching pair, creating a 2D array.
+function pairElement(str) {
+ str = str.split('');
+ let matched = {
+  G: 'C',
+  C: 'G',
+  T: 'A',
+  A: 'T',
+ };
+ const newArr = str.map(l => [l, matched[l]]);
+ //  console.log(newArr)
+ return newArr;
+}
+
+pairElement('GCG');
+
+//  https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/dna-pairing/
