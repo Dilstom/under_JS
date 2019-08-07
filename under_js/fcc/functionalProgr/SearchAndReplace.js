@@ -9,6 +9,8 @@
 // Note
 // Preserve the case of the first character in the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "dog", it should be replaced as "Dog"
 
+// Strings are immutable, you will need to save the edits on another variable, even if you must reuse the same one just to make it look like the changes where done using just that one variable.
+
 function myReplace(str, before, after) {
  if (str.includes(before)) {
   if (before.charAt(0) === before.charAt(0).toUpperCase()) {
@@ -18,10 +20,26 @@ function myReplace(str, before, after) {
   } else {
    str = str.replace(before, after);
   }
- } else {
-  null;
  }
  return str;
 }
 
 myReplace('A quick brown fox jumped over the lazy dog', 'jumped', 'leaped');
+// basic sol:
+
+// function myReplace(str, before, after) {
+//     // Find index where before is on string
+//     var index = str.indexOf(before);
+//     // Check to see if the first letter is uppercase or not
+//     if (str[index] === str[index].toUpperCase()) {
+//       // Change the after word to be capitalized before we use it.
+//       after = after.charAt(0).toUpperCase() + after.slice(1);
+//     }
+//     // Now replace the original str with the edited one.
+//     str = str.replace(before, after);
+
+//     return str;
+//   }
+
+//   // test here
+//   myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
