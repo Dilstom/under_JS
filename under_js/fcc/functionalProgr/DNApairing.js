@@ -8,6 +8,7 @@
 
 // The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 
+// 1.
 function pairElement(str) {
  const newArr = [];
 
@@ -20,6 +21,34 @@ function pairElement(str) {
    newArr.push(['T', 'A']);
   } else if (str[i] === 'A') {
    newArr.push(['A', 'T']);
+  }
+ }
+ return newArr;
+}
+
+pairElement('GCG');
+
+// 2. using Switch:
+function pairElement(str) {
+ const newArr = [];
+
+ for (let i = 0; i < str.length; i++) {
+  search(str[i]);
+ }
+
+ function search(a) {
+  switch (a) {
+   case 'G':
+    newArr.push(['G', 'C']);
+    break;
+   case 'C':
+    newArr.push(['C', 'G']);
+    break;
+   case 'T':
+    newArr.push(['T', 'A']);
+    break;
+   case 'A':
+    newArr.push(['A', 'T']);
   }
  }
  return newArr;
